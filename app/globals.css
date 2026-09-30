@@ -1,0 +1,263 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+  --color-card: #ffffff;
+  --color-card-foreground: #000000;
+  --color-primary: #000000;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f5f5f5;
+  --color-secondary-foreground: #000000;
+  --color-muted: #f5f5f5;
+  --color-muted-foreground: #737373;
+  --color-accent: #ff6b35;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #000000;
+  --color-input: #000000;
+  --color-ring: #000000;
+  --color-neon-yellow: #ffed00;
+  --color-neon-pink: #ff6b9d;
+  --color-neon-blue: #00d4ff;
+  --color-neon-green: #00ff88;
+  --color-neon-purple: #b829dd;
+  --radius: 0rem;
+  --radius-sm: 0rem;
+  --radius-md: 0rem;
+  --radius-lg: 0rem;
+  --radius-xl: 0rem;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --primary: #000000;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #000000;
+  --muted: #f5f5f5;
+  --muted-foreground: #737373;
+  --accent: #ff6b35;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #000000;
+  --input: #000000;
+  --ring: #000000;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --primary: #ffffff;
+  --primary-foreground: #000000;
+  --secondary: #2a2a2a;
+  --secondary-foreground: #ffffff;
+  --muted: #2a2a2a;
+  --muted-foreground: #a3a3a3;
+  --accent: #ff6b35;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #ffffff;
+  --input: #ffffff;
+  --ring: #ffffff;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.brutalist-shadow {
+  box-shadow: 6px 6px 0px 0px var(--color-border);
+}
+
+.brutalist-shadow-sm {
+  box-shadow: 3px 3px 0px 0px var(--color-border);
+}
+
+.brutalist-shadow-lg {
+  box-shadow: 10px 10px 0px 0px var(--color-border);
+}
+
+.brutalist-shadow-accent {
+  box-shadow: 6px 6px 0px 0px var(--color-accent);
+}
+
+.brutalist-shadow-neon-yellow {
+  box-shadow: 6px 6px 0px 0px var(--color-neon-yellow);
+}
+
+.brutalist-shadow-neon-pink {
+  box-shadow: 6px 6px 0px 0px var(--color-neon-pink);
+}
+
+.brutalist-shadow-neon-blue {
+  box-shadow: 6px 6px 0px 0px var(--color-neon-blue);
+}
+
+.brutalist-shadow-neon-green {
+  box-shadow: 6px 6px 0px 0px var(--color-neon-green);
+}
+
+.brutalist-shadow-neon-purple {
+  box-shadow: 6px 6px 0px 0px var(--color-neon-purple);
+}
+
+.brutalist-hover:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px 0px var(--color-border);
+}
+
+.brutalist-hover:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px var(--color-border);
+}
+
+.brutalist-card {
+  border: 3px solid var(--color-border);
+  box-shadow: 6px 6px 0px 0px var(--color-border);
+  transition: all 0.1s ease;
+}
+
+.brutalist-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px 0px var(--color-border);
+}
+
+.brutalist-card:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px var(--color-border);
+}
+
+.brutalist-btn {
+  border: 3px solid var(--color-border);
+  box-shadow: 4px 4px 0px 0px var(--color-border);
+  transition: all 0.1s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.brutalist-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px var(--color-border);
+}
+
+.brutalist-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px var(--color-border);
+}
+
+.brutalist-input {
+  border: 3px solid var(--color-border);
+  box-shadow: 3px 3px 0px 0px var(--color-border);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+.brutalist-input:focus {
+  outline: none;
+  box-shadow: 5px 5px 0px 0px var(--color-accent);
+}
+
+.brutalist-select {
+  border: 3px solid var(--color-border);
+  box-shadow: 3px 3px 0px 0px var(--color-border);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23000' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+
+.brutalist-select:focus {
+  outline: none;
+  box-shadow: 5px 5px 0px 0px var(--color-accent);
+}
+
+.brutalist-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--color-border);
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.brutalist-checkbox:checked {
+  background-color: var(--color-accent);
+}
+
+.brutalist-checkbox:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.brutalist-radio {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--color-border);
+  border-radius: 50%;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.brutalist-radio:checked {
+  background-color: var(--color-accent);
+  border-color: var(--color-border);
+}
+
+.brutalist-radio:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.text-brutalist {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.bg-neon-yellow { background-color: var(--color-neon-yellow); }
+.bg-neon-pink { background-color: var(--color-neon-pink); }
+.bg-neon-blue { background-color: var(--color-neon-blue); }
+.bg-neon-green { background-color: var(--color-neon-green); }
+.bg-neon-purple { background-color: var(--color-neon-purple); }
+
+.text-neon-yellow { color: var(--color-neon-yellow); }
+.text-neon-pink { color: var(--color-neon-pink); }
+.text-neon-blue { color: var(--color-neon-blue); }
+.text-neon-green { color: var(--color-neon-green); }
+.text-neon-purple { color: var(--color-neon-purple); }
